@@ -1,8 +1,35 @@
 package com.eazybytes.loans;
 
+import io.swagger.v3.oas.annotations.ExternalDocumentation;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.info.License;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+@OpenAPIDefinition(
+		info = @Info(
+				title="Loans Microservice REST API Documentation",
+				description="Bank-Loans-MS API Documentation",
+				version="v1",
+				contact=@Contact(
+						name="Mark Satin",
+						email="test@email.com",
+						url="test-website.com"
+				),
+				license=@License(
+						name="Apache 2.0",
+						url="test-website.com"
+				)
+		),
+		externalDocs=@ExternalDocumentation(
+				description="Bank-Loans-MS API Documentation",
+				url="test-website.com"
+		)
+)
+@EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @SpringBootApplication
 public class LoansApplication {
 
