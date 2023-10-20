@@ -10,23 +10,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @OpenAPIDefinition(
-		info = @Info(
-				title="Loans Microservice REST API Documentation",
-				description="Bank-Loans-MS API Documentation",
+		info=@Info(
+				title="Loans MS API Docs",
+				description="REST API Documentation for the Loans microservice in a personal banking application",
 				version="v1",
 				contact=@Contact(
 						name="Mark Satin",
-						email="test@email.com",
-						url="test-website.com"
+						email="mark@fakemail.com",
+						url="fake-website.com"
 				),
 				license=@License(
 						name="Apache 2.0",
-						url="test-website.com"
+						url="fake-website.com"
 				)
 		),
 		externalDocs=@ExternalDocumentation(
-				description="Bank-Loans-MS API Documentation",
-				url="test-website.com"
+				description="REST API Documentation for the Loans microservice in a Personal Banking Application",
+				url="fake-website.com"
 		)
 )
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
