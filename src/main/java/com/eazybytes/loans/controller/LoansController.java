@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Tag(
         name = "CRUD endpoints for the Loans microservice",
-        description = "CRUD REST API endpoints for the Accounts microservice in a personal banking application"
+        description = "CRUD REST API endpoints for the Accounts microservice in personal banking application"
 )
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
