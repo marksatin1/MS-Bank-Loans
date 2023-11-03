@@ -1,11 +1,11 @@
-package com.eazybytes.loans.controller;
+package com.cloudbank.loans.controller;
 
-import com.eazybytes.loans.constants.LoansConstants;
-import com.eazybytes.loans.dto.ErrorResponseDto;
-import com.eazybytes.loans.dto.LoansContactInfoDto;
-import com.eazybytes.loans.dto.LoansDto;
-import com.eazybytes.loans.dto.SuccessResponseDto;
-import com.eazybytes.loans.service.ILoansService;
+import com.cloudbank.loans.dto.LoansContactInfoDto;
+import com.cloudbank.loans.dto.LoansDto;
+import com.cloudbank.loans.dto.SuccessResponseDto;
+import com.cloudbank.loans.constants.LoansConstants;
+import com.cloudbank.loans.dto.ErrorResponseDto;
+import com.cloudbank.loans.service.ILoansService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

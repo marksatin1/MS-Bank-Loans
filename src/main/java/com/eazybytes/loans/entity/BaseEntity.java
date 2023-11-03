@@ -1,4 +1,4 @@
-package com.eazybytes.loans.entity;
+package com.cloudbank.loans.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
