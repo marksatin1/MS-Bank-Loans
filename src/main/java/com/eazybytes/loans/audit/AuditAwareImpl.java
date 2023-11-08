@@ -1,4 +1,4 @@
-package com.cloudbank.loans.audit;
+package com.eazybytes.loans.audit;
 
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

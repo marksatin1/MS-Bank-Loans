@@ -1,6 +1,6 @@
-package com.cloudbank.loans.exception;
+package com.eazybytes.loans.exception;
 
-import com.cloudbank.loans.dto.ErrorResponseDto;
+import com.eazybytes.loans.dto.ErrorResponseDto;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;

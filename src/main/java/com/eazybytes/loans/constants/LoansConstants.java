@@ -1,4 +1,4 @@
-package com.cloudbank.loans.constants;
+package com.eazybytes.loans.constants;
 
 public final class LoansConstants {
 

@@ -1,6 +1,6 @@
-package com.cloudbank.loans.service;
+package com.eazybytes.loans.service;
 
-import com.cloudbank.loans.dto.LoansDto;
+import com.eazybytes.loans.dto.LoansDto;
 
 public interface ILoansService {
 

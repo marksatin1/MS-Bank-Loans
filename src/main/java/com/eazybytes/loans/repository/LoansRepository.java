@@ -1,6 +1,6 @@
-package com.cloudbank.loans.repository;
+package com.eazybytes.loans.repository;
 
-import com.cloudbank.loans.entity.Loans;
+import com.eazybytes.loans.entity.Loans;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

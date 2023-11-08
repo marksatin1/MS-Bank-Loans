@@ -1,7 +1,7 @@
-package com.cloudbank.loans.mapper;
+package com.eazybytes.loans.mapper;
 
-import com.cloudbank.loans.dto.LoansDto;
-import com.cloudbank.loans.entity.Loans;
+import com.eazybytes.loans.dto.LoansDto;
+import com.eazybytes.loans.entity.Loans;
 
 public class LoansMapper {
 

@@ -1,11 +1,11 @@
-package com.cloudbank.loans.controller;
+package com.eazybytes.loans.controller;
 
-import com.cloudbank.loans.dto.LoansContactInfoDto;
-import com.cloudbank.loans.dto.LoansDto;
-import com.cloudbank.loans.dto.SuccessResponseDto;
-import com.cloudbank.loans.constants.LoansConstants;
-import com.cloudbank.loans.dto.ErrorResponseDto;
-import com.cloudbank.loans.service.ILoansService;
+import com.eazybytes.loans.dto.LoansContactInfoDto;
+import com.eazybytes.loans.dto.LoansDto;
+import com.eazybytes.loans.dto.SuccessResponseDto;
+import com.eazybytes.loans.constants.LoansConstants;
+import com.eazybytes.loans.dto.ErrorResponseDto;
+import com.eazybytes.loans.service.ILoansService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -14,6 +14,8 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -30,6 +32,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 public class LoansController {
+
+    private static final Logger logger = LoggerFactory.getLogger(LoansController.class);
 
     private final ILoansService iLoansService;
 
@@ -88,9 +92,10 @@ public class LoansController {
             )
     })
     @GetMapping("/fetch")
-    public ResponseEntity<LoansDto> fetchLoanDetails(@RequestParam
-                                                            @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits.")
+    public ResponseEntity<LoansDto> fetchLoanDetails(@RequestHeader("cloudbank-correlation-id")String correlationId,
+                                                     @RequestParam @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits.")
                                                             String mobileNumber) {
+        logger.debug("cloudbank-correlation-id found: {}", correlationId);
         LoansDto loansDto = iLoansService.fetchLoan(mobileNumber);
         return ResponseEntity
                 .status(HttpStatus.OK)

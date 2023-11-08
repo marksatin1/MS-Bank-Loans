@@ -1,4 +1,4 @@
-package com.cloudbank.loans.dto;
+package com.eazybytes.loans.dto;
 
 import lombok.Getter;
 import lombok.Setter;
